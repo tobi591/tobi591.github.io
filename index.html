@@ -72,9 +72,9 @@
           📍 Musterstadt, Deutschland
         </p>
         <form id="contactForm">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="E-Mail" required />
-          <textarea placeholder="Nachricht" rows="5" required></textarea>
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="E-Mail" required />
+          <textarea id="message" placeholder="Nachricht" rows="5" required></textarea>
           <button type="submit">Nachricht senden</button>
         </form>
       </section>
@@ -84,6 +84,14 @@
       <p>© 2025 Foodtrailer Vermietung | Alle Rechte vorbehalten</p>
     </footer>
 
+    <!-- 🔍 Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
