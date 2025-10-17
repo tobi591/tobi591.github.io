@@ -1,77 +1,97 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foodtrailer Vermietung</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="hero">
-    <div class="overlay">
-      <h1>🍔 Foodtrailer Vermietung</h1>
-      <p>Dein Event. Dein Geschmack. Unser Trailer.</p>
-      <a href="#kontakt" class="cta-btn">Jetzt anfragen</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodtrailer Vermietung</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="overlay">
+        <h1>🍔 Foodtrailer Vermietung</h1>
+        <p>Dein Event. Dein Geschmack. Unser Trailer.</p>
+        <a href="#kontakt" class="cta-btn">Jetzt anfragen</a>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#bilder">Bilder</a>
+      <a href="#vermietung">Vermietung</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <main>
+      <section id="ueber-uns" class="card">
+        <h2>Über uns</h2>
+        <p>
+          Wir vermieten einen voll ausgestatteten Foodtrailer für Events,
+          Feste, Hochzeiten oder Streetfood-Festivals. Ob Burger, Pommes,
+          Crêpes oder Getränke – unser Trailer bietet alles, was du brauchst.
+        </p>
+      </section>
+
+      <section id="bilder" class="card">
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+          <img src="bilder/trailer1.jpg" alt="Foodtrailer Außenansicht" />
+          <img src="bilder/trailer2.jpg" alt="Innenausstattung" />
+          <img src="bilder/trailer3.jpg" alt="Foodtruck im Einsatz" />
+          <img src="bilder/trailer4.jpg" alt="Abendstimmung mit Trailer" />
+        </div>
+      </section>
+
+      <section id="vermietung" class="card">
+        <h2>Vermietung & Preise</h2>
+        <p>
+          Der Trailer kann tageweise, wochenweise oder für ganze Events gemietet
+          werden. Auf Wunsch mit oder ohne Personal.
+        </p>
+        <div class="price-boxes">
+          <div class="price">
+            <h3>Tag</h3>
+            <p><strong>ab 150 €</strong></p>
+          </div>
+          <div class="price">
+            <h3>Wochenende</h3>
+            <p><strong>ab 400 €</strong></p>
+          </div>
+          <div class="price">
+            <h3>Langzeit</h3>
+            <p><strong>auf Anfrage</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="card">
+        <h2>Kontakt</h2>
+        <p>
+          📞 <a href="tel:+491701234567">+49 170 1234567</a><br />
+          📧 <a href="mailto:info@foodtrailer.de">info@foodtrailer.de</a><br />
+          📍 Musterstadt, Deutschland
+        </p>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="E-Mail" required />
+          <textarea id="message" placeholder="Nachricht" rows="5" required></textarea>
+          <button type="submit">Nachricht senden</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Foodtrailer Vermietung | Alle Rechte vorbehalten</p>
+    </footer>
+
+    <!-- 🔍 Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
     </div>
-  </header>
 
-  <nav>
-    <a href="#ueber-uns">Über uns</a>
-    <a href="#bilder">Bilder</a>
-    <a href="#vermietung">Vermietung</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-
-  <main>
-    <section id="ueber-uns" class="card">
-      <h2>Über uns</h2>
-      <p>Wir vermieten einen voll ausgestatteten Foodtrailer für Events, Feste, Hochzeiten oder Streetfood-Festivals. Ob Burger, Pommes, Crêpes oder Getränke – unser Trailer bietet alles, was du brauchst.</p>
-    </section>
-
-    <section id="bilder" class="card">
-      <h2>Bildergalerie</h2>
-      <div class="gallery">
-        <img src="bilder/trailer1.jpg" alt="Trailer 1">
-        <img src="bilder/trailer2.jpg" alt="Trailer 2">
-        <img src="bilder/trailer3.jpg" alt="Trailer 3">
-        <img src="bilder/trailer4.jpg" alt="Trailer 4">
-      </div>
-    </section>
-
-    <section id="vermietung" class="card">
-      <h2>Vermietung & Preise</h2>
-      <div class="price-boxes">
-        <div class="price"><h3>Tag</h3><p><strong>ab 150 €</strong></p></div>
-        <div class="price"><h3>Wochenende</h3><p><strong>ab 400 €</strong></p></div>
-        <div class="price"><h3>Langzeit</h3><p><strong>auf Anfrage</strong></p></div>
-      </div>
-    </section>
-
-    <section id="kontakt" class="card">
-      <h2>Kontakt</h2>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="E-Mail" required>
-        <textarea id="message" placeholder="Nachricht" rows="5" required></textarea>
-        <button type="submit">Nachricht senden</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Foodtrailer Vermietung | Alle Rechte vorbehalten</p>
-  </footer>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button class="close">&times;</button>
-    <button class="prev">&#10094;</button>
-    <img id="lightbox-img" class="lightbox-content">
-    <button class="next">&#10095;</button>
-  </div>
-
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
