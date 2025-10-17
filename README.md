@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to My Static Website</h1>
+      <h1>Welcome to My Static Website TEST</h1>
       <p>This site is hosted on GitHub Pages 🚀</p>
     </header>
 
