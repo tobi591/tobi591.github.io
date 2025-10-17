@@ -3,131 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Foodtrailer Vermietung</title>
-<style>
-/* ========== General Styles ========== */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #fafafa;
-  color: #333;
-}
-header.hero {
-  position: relative;
-  background: url('bilder/trailer1.jpg') center/cover no-repeat;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-header.hero .overlay {
-  background-color: rgba(0,0,0,0.5);
-  padding: 2rem;
-  border-radius: 10px;
-}
-.cta-btn {
-  background-color: #ff3b30;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-}
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  background: white;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-}
-nav a {
-  color: #ff3b30;
-  text-decoration: none;
-  font-weight: bold;
-}
-main {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-.gallery img {
-  width: 250px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-}
-.price-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.price {
-  background: #ffe5e5;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-}
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #333;
-  color: white;
-}
+<title>Foodtrailer Vermietung | Dein Event, Dein Geschmack</title>
+<meta name="description" content="Vermiete unseren voll ausgestatteten Foodtrailer für Events, Feste, Hochzeiten oder Streetfood-Festivals. Jetzt Bilder anschauen und Kontakt aufnehmen.">
+<meta name="keywords" content="Foodtrailer, Vermietung, Event, Streetfood, Hochzeiten, Trailer mieten">
+<meta name="author" content="Dein Name oder Firma">
 
-/* ========== Lightbox Styles ========== */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  align-items: center;
-  justify-content: center;
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="Foodtrailer Vermietung">
+<meta property="og:description" content="Vermiete unseren voll ausgestatteten Foodtrailer für Events, Feste und Hochzeiten.">
+<meta property="og:image" content="bilder/trailer1.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://deine-seite.github.io/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Foodtrailer Vermietung">
+<meta name="twitter:description" content="Vermiete unseren voll ausgestatteten Foodtrailer für Events, Feste und Hochzeiten.">
+<meta name="twitter:image" content="bilder/trailer1.jpg">
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Foodtrailer Vermietung",
+  "image": "https://deine-seite.github.io/bilder/trailer1.jpg",
+  "@id": "https://deine-seite.github.io/",
+  "url": "https://deine-seite.github.io/",
+  "telephone": "+491701234567",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 1",
+    "addressLocality": "Musterstadt",
+    "postalCode": "12345",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "20:00"
+  }
 }
+</script>
+
+<style>
+/* ===== Inline CSS (wie vorher) ===== */
+body { font-family: Arial,sans-serif; margin:0; background:#fafafa; color:#333; }
+header.hero { position:relative; background:url('bilder/trailer1.jpg') center/cover no-repeat; height:50vh; display:flex; align-items:center; justify-content:center; text-align:center; color:white; }
+header.hero .overlay { background:rgba(0,0,0,0.5); padding:2rem; border-radius:10px; }
+.cta-btn { background:#ff3b30; color:white; padding:.8rem 1.5rem; border-radius:8px; text-decoration:none; }
+nav { display:flex; justify-content:center; gap:1rem; background:white; padding:1rem; position:sticky; top:0; }
+nav a { color:#ff3b30; text-decoration:none; font-weight:bold; }
+main { max-width:1000px; margin:2rem auto; padding:0 1rem; }
+.card { background:white; border-radius:12px; padding:1.5rem; margin-bottom:2rem; box-shadow:0 4px 10px rgba(0,0,0,0.06); }
+.gallery { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.gallery img { width:250px; height:160px; object-fit:cover; border-radius:8px; cursor:pointer; transition: transform .2s; }
+.gallery img:hover { transform:scale(1.05); }
+.price-boxes { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+.price { background:#ffe5e5; padding:1rem 1.5rem; border-radius:8px; text-align:center; }
+footer { text-align:center; padding:2rem; background:#333; color:white; }
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; }
 .lightbox[aria-hidden="false"] { display:flex; }
-.lightbox-content {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-}
-.close, .prev, .next {
-  position: absolute;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 36px;
-  cursor: pointer;
-  padding: 8px;
-}
-.close { top: 20px; right: 30px; font-size:44px; }
-.prev { left: 20px; top: 50%; transform: translateY(-50%); }
-.next { right: 20px; top: 50%; transform: translateY(-50%); }
-.close:hover, .prev:hover, .next:hover { color: #ffcc00; }
-@media (max-width:600px) {
-  .gallery img { width: 180px; height: 120px; }
-  .close, .prev, .next { font-size: 28px; }
-}
+.lightbox-content { max-width:90%; max-height:80vh; border-radius:10px; }
+.close, .prev, .next { position:absolute; background:transparent; border:none; color:white; font-size:36px; cursor:pointer; padding:8px; }
+.close { top:20px; right:30px; font-size:44px; } 
+.prev { left:20px; top:50%; transform:translateY(-50%); }
+.next { right:20px; top:50%; transform:translateY(-50%); }
+.close:hover, .prev:hover, .next:hover { color:#ffcc00; }
+@media (max-width:600px){ .gallery img{width:180px;height:120px;} .close,.prev,.next{font-size:28px;} }
 </style>
 </head>
 <body>
@@ -148,39 +94,39 @@ footer {
 </nav>
 
 <main>
-  <section id="ueber-uns" class="card">
-    <h2>Über uns</h2>
-    <p>Wir vermieten einen voll ausgestatteten Foodtrailer für Events, Feste, Hochzeiten oder Streetfood-Festivals. Ob Burger, Pommes, Crêpes oder Getränke – unser Trailer bietet alles, was du brauchst.</p>
-  </section>
+<section id="ueber-uns" class="card">
+  <h2>Über uns</h2>
+  <p>Wir vermieten einen voll ausgestatteten Foodtrailer für Events, Feste, Hochzeiten oder Streetfood-Festivals. Ob Burger, Pommes, Crêpes oder Getränke – unser Trailer bietet alles, was du brauchst.</p>
+</section>
 
-  <section id="bilder" class="card">
-    <h2>Bildergalerie</h2>
-    <div class="gallery">
-      <img src="bilder/trailer1.jpg" alt="Trailer 1">
-      <img src="bilder/trailer2.jpg" alt="Trailer 2">
-      <img src="bilder/trailer3.jpg" alt="Trailer 3">
-      <img src="bilder/trailer4.jpg" alt="Trailer 4">
-    </div>
-  </section>
+<section id="bilder" class="card">
+  <h2>Bildergalerie</h2>
+  <div class="gallery">
+    <img src="bilder/trailer1.jpg" alt="Trailer 1">
+    <img src="bilder/trailer2.jpg" alt="Trailer 2">
+    <img src="bilder/trailer3.jpg" alt="Trailer 3">
+    <img src="bilder/trailer4.jpg" alt="Trailer 4">
+  </div>
+</section>
 
-  <section id="vermietung" class="card">
-    <h2>Vermietung & Preise</h2>
-    <div class="price-boxes">
-      <div class="price"><h3>Tag</h3><p><strong>ab 150 €</strong></p></div>
-      <div class="price"><h3>Wochenende</h3><p><strong>ab 400 €</strong></p></div>
-      <div class="price"><h3>Langzeit</h3><p><strong>auf Anfrage</strong></p></div>
-    </div>
-  </section>
+<section id="vermietung" class="card">
+  <h2>Vermietung & Preise</h2>
+  <div class="price-boxes">
+    <div class="price"><h3>Tag</h3><p><strong>ab 150 €</strong></p></div>
+    <div class="price"><h3>Wochenende</h3><p><strong>ab 400 €</strong></p></div>
+    <div class="price"><h3>Langzeit</h3><p><strong>auf Anfrage</strong></p></div>
+  </div>
+</section>
 
-  <section id="kontakt" class="card">
-    <h2>Kontakt</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Name" required>
-      <input type="email" id="email" placeholder="E-Mail" required>
-      <textarea id="message" placeholder="Nachricht" rows="5" required></textarea>
-      <button type="submit">Nachricht senden</button>
-    </form>
-  </section>
+<section id="kontakt" class="card">
+  <h2>Kontakt</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="E-Mail" required>
+    <textarea id="message" placeholder="Nachricht" rows="5" required></textarea>
+    <button type="submit">Nachricht senden</button>
+  </form>
+</section>
 </main>
 
 <footer>
@@ -197,61 +143,34 @@ footer {
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function(){
-
-  /* -------- EmailJS -------- */
-  const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-  const SERVICE_ID = "YOUR_SERVICE_ID";
-  const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-
+document.addEventListener("DOMContentLoaded",function(){
+  /* EmailJS */
+  const PUBLIC_KEY="YOUR_PUBLIC_KEY";
+  const SERVICE_ID="YOUR_SERVICE_ID";
+  const TEMPLATE_ID="YOUR_TEMPLATE_ID";
   if(window.emailjs) emailjs.init(PUBLIC_KEY);
-
-  const form = document.getElementById("contactForm");
-  form.addEventListener("submit", function(e){
+  const form=document.getElementById("contactForm");
+  form.addEventListener("submit",function(e){
     e.preventDefault();
-    const params = {
-      from_name: document.getElementById("name").value,
-      from_email: document.getElementById("email").value,
-      message: document.getElementById("message").value
-    };
-    emailjs.send(SERVICE_ID,TEMPLATE_ID,params)
-      .then(()=>{ alert("✅ Nachricht gesendet!"); form.reset(); })
-      .catch(()=>{ alert("❌ Fehler beim Senden."); });
+    const params={from_name:document.getElementById("name").value,from_email:document.getElementById("email").value,message:document.getElementById("message").value};
+    emailjs.send(SERVICE_ID,TEMPLATE_ID,params).then(()=>{alert("✅ Nachricht gesendet!");form.reset();}).catch(()=>{alert("❌ Fehler beim Senden.");});
   });
 
-  /* -------- Lightbox -------- */
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = lightbox.querySelector(".close");
-  const prevBtn = lightbox.querySelector(".prev");
-  const nextBtn = lightbox.querySelector(".next");
-  const images = Array.from(document.querySelectorAll(".gallery img"));
-  let currentIndex = 0;
-
-  function openLightbox(index){
-    currentIndex = index;
-    lightboxImg.src = images[index].src;
-    lightbox.setAttribute("aria-hidden","false");
-  }
-  function closeLightbox(){ lightbox.setAttribute("aria-hidden","true"); }
-  function showNext(){ currentIndex=(currentIndex+1)%images.length; lightboxImg.src=images[currentIndex].src; }
-  function showPrev(){ currentIndex=(currentIndex-1+images.length)%images.length; lightboxImg.src=images[currentIndex].src; }
-
-  images.forEach((img,i)=> img.addEventListener("click",()=>openLightbox(i)));
+  /* Lightbox */
+  const lightbox=document.getElementById("lightbox");
+  const lightboxImg=document.getElementById("lightbox-img");
+  const closeBtn=lightbox.querySelector(".close");
+  const prevBtn=lightbox.querySelector(".prev");
+  const nextBtn=lightbox.querySelector(".next");
+  const images=Array.from(document.querySelectorAll(".gallery img"));
+  let currentIndex=0;
+  function openLightbox(index){currentIndex=index; lightboxImg.src=images[index].src; lightbox.setAttribute("aria-hidden","false");}
+  function closeLightbox(){lightbox.setAttribute("aria-hidden","true");}
+  function showNext(){currentIndex=(currentIndex+1)%images.length; lightboxImg.src=images[currentIndex].src;}
+  function showPrev(){currentIndex=(currentIndex-1+images.length)%images.length; lightboxImg.src=images[currentIndex].src;}
+  images.forEach((img,i)=>img.addEventListener("click",()=>openLightbox(i)));
   closeBtn.addEventListener("click",closeLightbox);
   nextBtn.addEventListener("click",showNext);
   prevBtn.addEventListener("click",showPrev);
-  lightbox.addEventListener("click",(e)=>{ if(e.target===lightbox) closeLightbox(); });
-  document.addEventListener("keydown",(e)=>{
-    if(lightbox.getAttribute("aria-hidden")==="false"){
-      if(e.key==="Escape") closeLightbox();
-      if(e.key==="ArrowRight") showNext();
-      if(e.key==="ArrowLeft") showPrev();
-    }
-  });
-
-});
-</script>
-
-</body>
-</html>
+  lightbox.addEventListener("click",(e)=>{if(e.target===lightbox)closeLightbox();});
+  document.addEventListener("keydown",(e)=>{if(lightbox.getAttribute("aria-hidden")==="false"){if(e.key==="Escape")closeLightbox(); if(e.key
