@@ -1,59 +1,49 @@
-document.addEventListener("DOMContentLoaded", function() {
+// Initialize EmailJS
+emailjs.init("YOUR_PUBLIC_KEY"); // ⬅️ replace with your real key
 
-  // ---------- EmailJS ----------
-  const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-  const SERVICE_ID = "YOUR_SERVICE_ID";
-  const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  if (window.emailjs) emailjs.init(PUBLIC_KEY);
+  const params = {
+    from_name: document.getElementById("name").value,
+    from_email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
 
-  const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const params = {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-      };
-      emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
-        .then(() => { alert("✅ Nachricht gesendet!"); form.reset(); })
-        .catch(() => { alert("❌ Fehler beim Senden."); });
+  emailjs
+    .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+    .then(function (response) {
+      alert("✅ Danke! Deine Nachricht wurde erfolgreich gesendet.");
+      console.log("SUCCESS!", response.status, response.text);
+      e.target.reset();
+    })
+    .catch(function (error) {
+      alert("❌ Fehler beim Senden der Nachricht. Bitte später erneut versuchen.");
+      console.error("FAILED...", error);
     });
-  }
+});
 
-  // ---------- Lightbox ----------
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = lightbox.querySelector(".close");
-  const prevBtn = lightbox.querySelector(".prev");
-  const nextBtn = lightbox.querySelector(".next");
-  const images = Array.from(document.querySelectorAll(".gallery img"));
-  let currentIndex = 0;
+// ---------- Lightbox functionality ----------
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
 
-  function openLightbox(index) {
-    currentIndex = index;
-    lightboxImg.src = images[index].src;
-    lightbox.setAttribute("aria-hidden", "false");
-  }
-
-  function closeLightbox() { lightbox.setAttribute("aria-hidden","true"); }
-
-  function showNext() { currentIndex = (currentIndex+1)%images.length; lightboxImg.src = images[currentIndex].src; }
-  function showPrev() { currentIndex = (currentIndex-1+images.length)%images.length; lightboxImg.src = images[currentIndex].src; }
-
-  images.forEach((img, i)=> img.addEventListener("click", ()=> openLightbox(i)));
-  closeBtn.addEventListener("click", closeLightbox);
-  nextBtn.addEventListener("click", showNext);
-  prevBtn.addEventListener("click", showPrev);
-  lightbox.addEventListener("click", (e)=> { if(e.target===lightbox) closeLightbox(); });
-
-  document.addEventListener("keydown",(e)=>{
-    if(lightbox.getAttribute("aria-hidden")==="false"){
-      if(e.key==="Escape") closeLightbox();
-      if(e.key==="ArrowRight") showNext();
-      if(e.key==="ArrowLeft") showPrev();
-    }
+// Add click listener to all gallery images
+document.querySelectorAll(".gallery img").forEach((img) => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "block";
+    lightboxImg.src = img.src; // show clicked image in large view
   });
+});
 
+// Close the lightbox when the X is clicked
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+// Close the lightbox when clicking outside the image
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
 });
