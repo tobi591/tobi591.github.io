@@ -1,46 +1,99 @@
+/* Global Styles */
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  background-color: #fafafa;
   color: #333;
+  background: linear-gradient(180deg, #fff7f7, #ffe5e5);
 }
 
-header {
-  text-align: center;
-  background-color: #d32f2f;
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url("bilder/trailer1.jpg") center/cover no-repeat;
+  height: 80vh;
   color: white;
-  padding: 2.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background-color: #ff3b30;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #c62828;
+}
+
+/* Navigation */
 nav {
-  background-color: #fff;
+  background-color: white;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   padding: 1rem;
-  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
   text-decoration: none;
-  color: #d32f2f;
+  color: #ff3b30;
   font-weight: 600;
+  transition: color 0.2s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #b71c1c;
 }
 
+/* Sections */
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
-h2 {
-  color: #d32f2f;
+.card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -52,9 +105,37 @@ h2 {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Price Boxes */
+.price-boxes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.price {
+  background-color: #ffebee;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  text-align: center;
+  flex: 1 1 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.price h3 {
+  color: #d32f2f;
+  margin-bottom: 0.5rem;
+}
+
+/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -65,29 +146,32 @@ form {
 input,
 textarea {
   padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   font-size: 1rem;
 }
 
 button {
-  background-color: #d32f2f;
+  background-color: #ff3b30;
   color: white;
   padding: 0.8rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
   background-color: #b71c1c;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: #333;
   color: white;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
 }
