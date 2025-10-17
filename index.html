@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>🍔 Foodtrailer Vermietung</h1>
-      <p>Dein Event. Dein Geschmack. Unser Trailer.</p>
+    <header class="hero">
+      <div class="overlay">
+        <h1>🍔 Foodtrailer Vermietung</h1>
+        <p>Dein Event. Dein Geschmack. Unser Trailer.</p>
+        <a href="#kontakt" class="cta-btn">Jetzt anfragen</a>
+      </div>
     </header>
 
     <nav>
@@ -20,7 +23,7 @@
     </nav>
 
     <main>
-      <section id="ueber-uns">
+      <section id="ueber-uns" class="card">
         <h2>Über uns</h2>
         <p>
           Wir vermieten einen voll ausgestatteten Foodtrailer für Events,
@@ -29,7 +32,7 @@
         </p>
       </section>
 
-      <section id="bilder">
+      <section id="bilder" class="card">
         <h2>Bildergalerie</h2>
         <div class="gallery">
           <img src="bilder/trailer1.jpg" alt="Foodtrailer Außenansicht" />
@@ -39,24 +42,35 @@
         </div>
       </section>
 
-      <section id="vermietung">
+      <section id="vermietung" class="card">
         <h2>Vermietung & Preise</h2>
         <p>
           Der Trailer kann tageweise, wochenweise oder für ganze Events gemietet
           werden. Auf Wunsch mit oder ohne Personal.
         </p>
-        <ul>
-          <li><strong>Tagessatz:</strong> ab 150 €</li>
-          <li><strong>Wochenende:</strong> ab 400 €</li>
-          <li><strong>Langzeitmiete:</strong> auf Anfrage</li>
-        </ul>
+        <div class="price-boxes">
+          <div class="price">
+            <h3>Tag</h3>
+            <p><strong>ab 150 €</strong></p>
+          </div>
+          <div class="price">
+            <h3>Wochenende</h3>
+            <p><strong>ab 400 €</strong></p>
+          </div>
+          <div class="price">
+            <h3>Langzeit</h3>
+            <p><strong>auf Anfrage</strong></p>
+          </div>
+        </div>
       </section>
 
-      <section id="kontakt">
+      <section id="kontakt" class="card">
         <h2>Kontakt</h2>
-        <p>📞 Telefon: <a href="tel:+491701234567">+49 170 1234567</a></p>
-        <p>📧 E-Mail: <a href="mailto:info@foodtrailer.de">info@foodtrailer.de</a></p>
-        <p>📍 Standort: Musterstadt, Deutschland</p>
+        <p>
+          📞 <a href="tel:+491701234567">+49 170 1234567</a><br />
+          📧 <a href="mailto:info@foodtrailer.de">info@foodtrailer.de</a><br />
+          📍 Musterstadt, Deutschland
+        </p>
         <form id="contactForm">
           <input type="text" placeholder="Name" required />
           <input type="email" placeholder="E-Mail" required />
