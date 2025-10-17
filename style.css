@@ -1,80 +1,140 @@
-/* ---------- Lightbox ---------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+.hero {
+  position: relative;
+  background: url('bilder/trailer1.jpg') center/cover no-repeat;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero .overlay {
+  background-color: rgba(0,0,0,0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.cta-btn {
+  background-color: #ff3b30;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #ff3b30;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.price-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.price {
+  background: #ffe5e5;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #333;
+  color: white;
+}
+
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
-  z-index: 999;
-  padding-top: 80px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
 }
 
+.lightbox[aria-hidden="false"] { display: flex; }
+
 .lightbox-content {
-  margin: auto;
-  display: block;
   max-width: 90%;
   max-height: 80vh;
-  border-radius: 12px;
-  transition: 0.3s;
+  border-radius: 10px;
 }
 
-.close {
+.close, .prev, .next {
   position: absolute;
-  top: 40px;
-  right: 60px;
+  background: transparent;
+  border: none;
   color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.close:hover {
-  color: #ff3b30;
-}
-
-/* Arrows */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
   font-size: 36px;
-  transition: 0.3s;
-  user-select: none;
-  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  padding: 8px;
 }
 
-.prev {
-  left: 20px;
-}
+.close { top: 20px; right: 30px; font-size:44px; }
+.prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.next { right: 20px; top: 50%; transform: translateY(-50%); }
+.close:hover, .prev:hover, .next:hover { color: #ffcc00; }
 
-.next {
-  right: 20px;
-}
-
-.prev:hover,
-.next:hover {
-  color: #ffcc00;
-}
-
-/* Smooth fade-in */
-.lightbox-content {
-  animation: zoomIn 0.3s;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+@media (max-width:600px) {
+  .gallery img { width: 180px; height: 120px; }
+  .close, .prev, .next { font-size: 28px; }
 }
