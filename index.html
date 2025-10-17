@@ -173,4 +173,8 @@ document.addEventListener("DOMContentLoaded",function(){
   nextBtn.addEventListener("click",showNext);
   prevBtn.addEventListener("click",showPrev);
   lightbox.addEventListener("click",(e)=>{if(e.target===lightbox)closeLightbox();});
-  document.addEventListener("keydown",(e)=>{if(lightbox.getAttribute("aria-hidden")==="false"){if(e.key==="Escape")closeLightbox(); if(e.key
+  document.addEventListener("keydown",(e)=>{if(lightbox.getAttribute("aria-hidden")==="false"){if(e.key==="Escape")closeLightbox(); if(e.key==="ArrowRight")showNext(); if(e.key==="ArrowLeft")showPrev();}});
+});
+</script>
+</body>
+</html>
