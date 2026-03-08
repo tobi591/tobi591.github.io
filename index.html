@@ -287,7 +287,10 @@ footer {
       <img src="bilder/trailer1.jpg" alt="Trailer Außenansicht">
       <img src="bilder/trailer2.jpg" alt="Innenausstattung">
       <img src="bilder/trailer3.jpg" alt="Trailer bei Event">
-      <img src="bilder/trailer4.jpg" alt="Foodtrailer bei Nacht">
+      <img src="bilder/trailer4.jpg" alt="Trailer bei Event">
+      <img src="bilder/trailer5.jpg" alt="Pimms und Wein!">
+      <img src="bilder/trailer6.jpg" alt="Softeis!">
+      <img src="bilder/trailer7.jpg" alt="Pimms!">
     </div>
   </section>
 
@@ -296,7 +299,6 @@ footer {
     <div class="price-boxes">
       <div class="price"><h3>Tag</h3><p><strong>auf Anfrage</strong></p></div>
       <div class="price"><h3>Wochenende</h3><p><strong>auf Anfrage</strong></p></div>
-      <div class="price"><h3>Langzeit</h3><p><strong>auf Anfrage</strong></p></div>
     </div>
   </section>
 
@@ -314,16 +316,6 @@ footer {
         <h3>📧 E-Mail</h3>
         <p><a href="mailto:stefan@foodtrailer-rink.de">stefan@foodtrailer-rink.de</a></p>
       </div>
-
-      <form id="contactForm" class="contact-form">
-        <label for="name">Name *</label>
-        <input type="text" id="name" required>
-        <label for="email">E-Mail *</label>
-        <input type="email" id="email" required>
-        <label for="message">Nachricht *</label>
-        <textarea id="message" rows="5" required></textarea>
-        <button type="submit" class="cta-btn">Nachricht senden</button>
-      </form>
     </div>
   </section>
 </main>
@@ -343,38 +335,9 @@ footer {
   <img id="lightbox-img" class="lightbox-content">
   <button class="next">&#10095;</button>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded",()=>{
-  // EmailJS
-  const PUBLIC_KEY="YOUR_PUBLIC_KEY";
-  const SERVICE_ID="YOUR_SERVICE_ID";
-  const TEMPLATE_ID="YOUR_TEMPLATE_ID";
-  if(window.emailjs) emailjs.init(PUBLIC_KEY);
-  const form=document.getElementById("contactForm");
-  form.addEventListener("submit",e=>{
-    e.preventDefault();
-    const params={from_name:form.name.value,from_email:form.email.value,message:form.message.value};
-    emailjs.send(SERVICE_ID,TEMPLATE_ID,params)
-      .then(()=>{alert("✅ Nachricht gesendet!");form.reset();})
-      .catch(()=>{alert("❌ Fehler beim Senden.");});
-  });
-
-  // Lightbox
-  const lb=document.getElementById("lightbox"),img=lb.querySelector("#lightbox-img");
-  const imgs=Array.from(document.querySelectorAll(".gallery img"));
-  let i=0;
-  const show=n=>{i=(n+imgs.length)%imgs.length;img.src=imgs[i].src;lb.setAttribute("aria-hidden","false");};
-  imgs.forEach((im,n)=>im.addEventListener("click",()=>show(n)));
-  lb.querySelector(".close").onclick=()=>lb.setAttribute("aria-hidden","true");
-  lb.querySelector(".next").onclick=()=>show(i+1);
-  lb.querySelector(".prev").onclick=()=>show(i-1);
-  lb.addEventListener("click",e=>{if(e.target===lb)lb.setAttribute("aria-hidden","true");});
-});
-</script>
 </body>
 </html>
+
 
 
 
