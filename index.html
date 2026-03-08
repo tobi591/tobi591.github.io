@@ -335,8 +335,22 @@ footer {
   <img id="lightbox-img" class="lightbox-content">
   <button class="next">&#10095;</button>
 </div>
+  <script>
+    // Lightbox
+  const lb=document.getElementById("lightbox"),img=lb.querySelector("#lightbox-img");
+  const imgs=Array.from(document.querySelectorAll(".gallery img"));
+  let i=0;
+  const show=n=>{i=(n+imgs.length)%imgs.length;img.src=imgs[i].src;lb.setAttribute("aria-hidden","false");};
+  imgs.forEach((im,n)=>im.addEventListener("click",()=>show(n)));
+  lb.querySelector(".close").onclick=()=>lb.setAttribute("aria-hidden","true");
+  lb.querySelector(".next").onclick=()=>show(i+1);
+  lb.querySelector(".prev").onclick=()=>show(i-1);
+  lb.addEventListener("click",e=>{if(e.target===lb)lb.setAttribute("aria-hidden","true");});
+});
+</script>
 </body>
 </html>
+
 
 
 
