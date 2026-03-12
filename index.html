@@ -1,369 +1,1048 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rink Foodtrailer Vermietung | Dein Event, Dein Geschmack</title>
-<meta name="description" content="Miete unseren perfekt ausgestatteten Foodtrailer für Events, Feste, Hochzeiten oder Streetfood-Festivals. Jetzt Bilder anschauen und Kontakt aufnehmen.">
-<meta name="keywords" content="Foodtrailer, Vermietung, Event, Streetfood, Hochzeiten, Trailer mieten">
-<meta name="author" content="Foodtrailer Vermietung">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+  <title>Rink Foodtrailer | Für öffentliche Events, Märkte und Aktionsflächen</title>
+  <meta name="description" content="Rink Foodtrailer aus Schaafheim für öffentliche Events, Märkte, Gartenschauen, Firmenaktionen und Veranstaltungsflächen. Mit Softeis, Bubblewaffeln, Hotdogs und flexiblen Einsatzmöglichkeiten.">
+  <meta name="keywords" content="Foodtrailer, Schaafheim, öffentliche Events, Markt, Gartenschau, Stadtfest, Firmenaktion, Softeis, Bubblewaffel, Hotdog">
+  <meta name="author" content="Rink Foodtrailer">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Foodtrailer Vermietung">
-<meta property="og:description" content="Miete unseren modernen Foodtrailer für dein Event – perfekt augestattet!">
-<meta property="og:image" content="bilder/trailer1.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://foodtrailer-rink.de">
+  <meta property="og:title" content="Rink Foodtrailer">
+  <meta property="og:description" content="Foodtrailer für öffentliche Events, Märkte, Gartenschauen und Veranstaltungsflächen im Raum Schaafheim.">
+  <meta property="og:image" content="bilder/trailer1.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.foodtrailer-rink.de/">
 
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Foodtrailer Vermietung",
-  "image": "https://foodtrailer-rink.de/bilder/trailer1.jpg",
-  "url": "https://foodtrailer-rink.de/",
-  "telephone": " ",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Waldstr 16",
-    "addressLocality": "Schaafheim",
-    "postalCode": "64850",
-    "addressCountry": "DE"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Rink Foodtrailer",
+    "image": "https://www.foodtrailer-rink.de/bilder/trailer1.jpg",
+    "url": "https://www.foodtrailer-rink.de/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Waldstraße 16",
+      "addressLocality": "Schaafheim",
+      "postalCode": "64850",
+      "addressCountry": "DE"
+    },
+    "areaServed": "Umkreis von etwa 80 km rund um Schaafheim",
+    "email": "stefan@foodtrailer-rink.de"
   }
-}
-</script>
+  </script>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #fafafa;
-  color: #333;
-}
-header.hero {
-  position: relative;
-  background: url('bilder/trailer1.jpg') center/cover no-repeat;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-header.hero .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 10px;
-}
-.cta-btn {
-  background-color: #ff3b30;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-}
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  background: white;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-}
-nav a {
-  color: #ff3b30;
-  text-decoration: none;
-  font-weight: bold;
-}
-main {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-.gallery img {
-  width: 250px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-}
-.price-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.price {
-  background: #ffe5e5;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-}
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #333;
-  color: white;
-}
+  <style>
+    :root {
+      --bg: #f6f3ec;
+      --surface: #fffdf9;
+      --surface-strong: #f0ebe2;
+      --text: #1d2c32;
+      --muted: #607077;
+      --line: rgba(29, 44, 50, 0.12);
+      --deep: #20363d;
+      --deep-2: #17282e;
+      --accent: #c96d3f;
+      --accent-dark: #a8552d;
+      --accent-soft: #f5dfd3;
+      --sage: #dce5dd;
+      --shadow: 0 18px 50px rgba(21, 34, 39, 0.08);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --container: 1200px;
+    }
 
-/* === Kontaktbereich === */
-.contact-card {
-  background: linear-gradient(135deg, #fff 0%, #ffecec 100%);
-  border: 1px solid #ffd4d4;
-}
-.contact-intro {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #444;
-}
-.contact-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-.contact-info h3 {
-  margin-bottom: 0.2rem;
-  color: #ff3b30;
-}
-.contact-info p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-.contact-info a {
-  color: #333;
-  text-decoration: none;
-}
-.contact-info a:hover {
-  color: #ff3b30;
-}
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-.contact-form label {
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #444;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 1rem;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #ff3b30;
-  outline: none;
-  box-shadow: 0 0 4px rgba(255,59,48,0.3);
-}
-.contact-form button {
-  align-self: flex-start;
-  margin-top: 0.5rem;
-}
-@media (max-width: 768px) {
-  .contact-wrapper { grid-template-columns: 1fr; }
-  .contact-info { text-align: center; }
-  .contact-form button { align-self: center; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    .container {
+      width: min(var(--container), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(246, 243, 236, 0.86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(29, 44, 50, 0.08);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .brand-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.7);
+      border-radius: 14px;
+      padding: 0.7rem 0.85rem;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+    }
+
+    .site-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: var(--accent-dark);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border-radius: 999px;
+      padding: 0.95rem 1.45rem;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover,
+    .btn:focus-visible { transform: translateY(-1px); }
+
+    .btn-primary {
+  background: #6f9a8f;
+  color: #ffffff;
+  border: 1px solid #6f9a8f;
 }
 
-/* === Lightbox === */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  align-items: center;
-  justify-content: center;
+    .btn-primary:hover {
+  background: #5f887e;
+  border-color: #5f887e;
 }
-.lightbox[aria-hidden="false"] { display: flex; }
-.lightbox-content {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-}
-.close, .prev, .next {
-  position: absolute;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 36px;
-  cursor: pointer;
-  padding: 8px;
-}
-.close { top: 20px; right: 30px; font-size: 44px; }
-.prev { left: 20px; top: 50%; transform: translateY(-50%); }
-.next { right: 20px; top: 50%; transform: translateY(-50%); }
-.close:hover, .prev:hover, .next:hover { color: #ffcc00; }
-@media (max-width: 600px) {
-  .gallery img { width: 180px; height: 120px; }
-  .close, .prev, .next { font-size: 28px; }
-}
-</style>
+    .btn-primary:focus-visible { background: var(--deep-2); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible { background: rgba(255,255,255,0.65); }
+
+    .hero {
+      padding: 2rem 0 1.5rem;
+    }
+
+    .hero-shell {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      background: var(--surface);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      padding: clamp(2rem, 4vw, 4rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 620px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      right: -4rem;
+      bottom: -4rem;
+      width: 16rem;
+      height: 16rem;
+      background: radial-gradient(circle, rgba(201, 109, 63, 0.12), transparent 65%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      color: var(--accent-dark);
+      background: var(--accent-soft);
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1.15rem;
+    }
+
+    h1, h2, h3 { margin: 0; line-height: 1.12; }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 6vw, 5.1rem);
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      max-width: 12ch;
+    }
+
+    .lead {
+      font-size: 1.14rem;
+      color: var(--muted);
+      max-width: 48rem;
+      margin: 0 0 1.6rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .signal-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .signal {
+      padding: 1rem 1rem 0.95rem;
+      background: var(--surface-strong);
+      border-radius: 18px;
+      border: 1px solid rgba(29, 44, 50, 0.06);
+    }
+
+    .signal strong {
+      display: block;
+      font-size: 0.92rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .signal span {
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+
+    .hero-stack {
+      display: grid;
+      grid-template-rows: 1.1fr 0.9fr;
+      gap: 1.4rem;
+      min-height: 620px;
+    }
+
+    .hero-image,
+    .hero-sidecard {
+      border-radius: 34px;
+      overflow: visible;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      position: relative;
+      background: url('bilder/trailer1.jpg') center center / cover no-repeat;
+      min-height: 340px;
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 23, 25, 0.08) 0%, rgba(16, 23, 25, 0.36) 100%);
+    }
+
+    .hero-caption {
+      position: absolute;
+      left: 1.4rem;
+      bottom: 1.4rem;
+      z-index: 1;
+      color: #fff;
+      max-width: 22rem;
+    }
+
+    .hero-caption strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-caption span {
+      color: rgba(255,255,255,0.86);
+      font-size: 0.95rem;
+    }
+
+    .hero-sidecard {
+      background: linear-gradient(135deg, var(--deep) 0%, #29424a 100%);
+      color: #fff;
+      padding: 1.6rem;
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .hero-sidecard .mini-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .hero-sidecard h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-sidecard p,
+    .hero-sidecard li,
+    .hero-sidecard a {
+      color: rgba(255,255,255,0.84);
+      text-decoration: none;
+    }
+
+    .hero-sidecard ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .hero-sidecard li {
+      padding-top: 0.7rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    section { padding: 2rem 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 42rem;
+      color: var(--muted);
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.82rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--accent-dark);
+      margin-bottom: 0.45rem;
+    }
+
+    .band {
+      background: var(--deep);
+      color: #fff;
+      border-radius: 30px;
+      padding: 1.25rem;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr 0.85fr 0.85fr;
+      gap: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .band div {
+      padding: 0.6rem 0.8rem;
+      border-left: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .band div:first-child { border-left: none; }
+    .band strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+    .band span {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.94rem;
+    }
+
+    .layout-split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .panel,
+    .card,
+    .offer,
+    .usecase,
+    .step,
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 2rem;
+    }
+
+    .panel p { color: var(--muted); margin: 0 0 1rem; }
+
+    .list-clean {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 0;
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .list-clean li {
+      padding-left: 1rem;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .list-clean li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .mosaic .big {
+      grid-column: span 2;
+      min-height: 320px;
+    }
+
+    .mosaic figure {
+      margin: 0;
+      border-radius: 26px;
+      overflow: hidden;
+      min-height: 220px;
+      box-shadow: var(--shadow);
+    }
+
+    .mosaic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .offers-grid,
+    .usecases-grid,
+    .steps-grid,
+    .gallery-grid,
+    .contact-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .offers-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .usecases-grid { grid-template-columns: 1.1fr 0.9fr 0.9fr; }
+    .steps-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
+
+    .offer,
+    .usecase,
+    .step,
+    .contact-box {
+      padding: 1.5rem;
+    }
+
+    .offer h3,
+    .usecase h3,
+    .step h3,
+    .contact-box h3 {
+      font-size: 1.18rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .offer p,
+    .usecase p,
+    .step p,
+    .contact-box p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .offer.alt { background: linear-gradient(180deg, #fff9f4 0%, #fffdf9 100%); }
+    .usecase.main { background: linear-gradient(135deg, var(--sage) 0%, #edf2ee 100%); }
+
+    .offer ul,
+    .contact-box ul {
+      margin: 1rem 0 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+    }
+
+    .step-number {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 800;
+      margin-bottom: 0.95rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 22px;
+      cursor: pointer;
+      box-shadow: 0 14px 28px rgba(21, 34, 39, 0.08);
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .gallery-grid img:hover,
+    .gallery-grid img:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 34px rgba(21, 34, 39, 0.14);
+    }
+
+    .gallery-note {
+      color: var(--muted);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-box.dark {
+      background: linear-gradient(135deg, var(--deep-2) 0%, var(--deep) 100%);
+      color: #fff;
+      border: none;
+    }
+
+    .contact-box.dark p,
+    .contact-box.dark li,
+    .contact-box.dark a {
+      color: rgba(255,255,255,0.84);
+      text-decoration: none;
+    }
+
+    .site-footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+    }
+
+    .footer-box {
+      border-top: 1px solid var(--line);
+      padding-top: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .lightbox[aria-hidden="false"] { display: flex; }
+
+    .lightbox-content {
+      max-width: min(92vw, 1280px);
+      max-height: 82vh;
+      border-radius: 18px;
+    }
+
+    .close, .prev, .next {
+      position: absolute;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 2.2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1;
+    }
+
+    .close { top: 18px; right: 28px; font-size: 2.7rem; }
+    .prev { left: 18px; top: 50%; transform: translateY(-50%); }
+    .next { right: 18px; top: 50%; transform: translateY(-50%); }
+
+    @media (max-width: 1040px) {
+      .hero-shell,
+      .layout-split,
+      .offers-grid,
+      .usecases-grid,
+      .steps-grid,
+      .gallery-grid,
+      .contact-grid,
+      .band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-stack { min-height: auto; }
+
+      .signal-row { grid-template-columns: 1fr; }
+
+      .mosaic .big { min-height: 260px; }
+    }
+
+    @media (max-width: 760px) {
+      .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .site-nav {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        top: calc(100% + 0.5rem);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+        background: rgba(255,253,249,0.98);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 1rem;
+        box-shadow: var(--shadow);
+      }
+
+      .site-nav.open { display: flex; }
+      .site-nav .btn-primary,
+      .btn { width: 100%; }
+
+      .hero-copy { min-height: auto; padding: 1.5rem; }
+      .hero-actions { flex-direction: column; }
+      .container { width: min(var(--container), calc(100% - 1rem)); }
+      .mosaic { grid-template-columns: 1fr; }
+      .mosaic .big { grid-column: span 1; }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#start">
+        <span class="brand-title">Rink Foodtrailer</span>
+        <span class="brand-subtitle">Schaafheim & Umgebung</span>
+      </a>
 
-<header class="hero">
-  <div class="overlay">
-    <h1>Rink Foodtrailer Vermietung</h1>
-    <p>Dein Event. Dein Geschmack. Unser Trailer.</p>
-    <a href="#kontakt" class="cta-btn">Jetzt anfragen</a>
-  </div>
-</header>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menü</button>
 
-  <div style="background:#ffcc00; color:#000; text-align:center; padding:10px; font-family:sans-serif; font-size:16px;">
-  🚧 Diese Website ist noch im Aufbau. Individuelle Anfragen aber bereits gerne per Mail! 🚧
-</div>
-
-<nav>
-  <a href="#ueber-uns">Über uns</a>
-  <a href="#bilder">Bilder</a>
-  <a href="#vermietung">Vermietung</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
-
-<main>
-  <section id="ueber-uns" class="card">
-    <h2>Über uns</h2>
-<p>Wir kommen mit unserem liebevoll umgebauten Foodtrailer direkt zu Deiner Feier oder Deinem Event und sorgen für ein echtes Highlight.</p>
-
-<p>Unser Trailer wurde im charmanten englischen Countrystyle gestaltet und wird natürlich passend zu Deinem Event stilvoll dekoriert.</p>
-
-<p>Freu Dich auf leckeres Softeis – auf Wunsch auch in der angesagten Bubblewaffel mit verschiedenen Toppings.</p>
-
-<p>Außerdem servieren wir Hotdogs – klassisch oder mit besonderen Saucen – saftige Burger mit Pulled Pork und kleine Flatbreads (ähnlich Mini-Flammkuchen).</p>
-
-<p>Als besonderes Highlight bieten wir außerdem ein englisches Afternoon-Tea-Arrangement mit Scones, Clotted Cream, Sandwiches und kleinen süßen Küchlein.</p>
-
-<p>Dazu passt perfekt ein erfrischendes Glas Pimm’s No. 1 – typisch englisch und einfach lecker.</p>
-
-<p>Unser Foodtrailer ist mit einem modernen Barkühlschrank ausgestattet und eignet sich perfekt für Events jeder Art.</p>
-
-<p>Egal ob Geburtstag, Hochzeit, Polterabend, Firmenfeier, Vereinsfest, Foodfestival, Straßenfest, Sportevent, Firmenpräsentation oder Geschäftseröffnung – wir sind gerne dabei.</p>
-
-<p>Du brauchst nur einzelne Geräte für Dein Event?</p>
-
-<p>Kein Problem – unsere professionelle Softeismaschine, der kleine Flammkuchenofen, der Hot-Dog-Steamer und weiteres Equipment können auch separat gemietet werden.</p>
-
-<p>Melde Dich einfach unverbindlich bei uns – wir schauen gemeinsam, was für Dein Event möglich ist.</p>
-
-<p>Bitte beachte: Anfragen nehmen wir nur innerhalb eines Umkreises von etwa 80 km rund um Schaafheim an.</p>
-
-<p>Wir freuen uns auf Deine Anfrage!</p>  </section>
-
-  <section id="bilder" class="card">
-    <h2>Bildergalerie</h2>
-    <div class="gallery">
-      <img src="bilder/trailer1.jpg" alt="Trailer Außenansicht">
-      <img src="bilder/trailer2.jpg" alt="Innenausstattung">
-      <img src="bilder/trailer3.jpg" alt="Trailer bei Event">
-      <img src="bilder/trailer4.jpg" alt="Trailer bei Event">
-      <img src="bilder/trailer5.jpg" alt="Pimms und Wein!">
-      <img src="bilder/trailer6.jpg" alt="Softeis!">
-      <img src="bilder/trailer7.jpg" alt="Pimms!">
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="#einsatz">Einsatz</a>
+        <a href="#angebot">Angebot</a>
+        <a href="#bilder">Bilder</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="btn btn-primary">Anfragen</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="vermietung" class="card">
-    <h2>Preise</h2>
-    <div class="price-boxes">
-      <div class="price"><h3>Tag</h3><p><strong>auf Anfrage</strong></p></div>
-      <div class="price"><h3>Wochenende</h3><p><strong>auf Anfrage</strong></p></div>
-    </div>
-  </section>
+  <main id="start">
+    <section class="hero">
+      <div class="container hero-shell">
+        <div class="hero-copy">
+          <span class="eyebrow">Für Märkte, Aktionsflächen und öffentliche Veranstaltungen</span>
+          <h1>Ein Foodtrailer, der auf Veranstaltungen einfach gut funktioniert</h1>
+          <p class="lead">Rink Foodtrailer ist für Formate gedacht, bei denen ein sympathischer, gepflegter und gut sichtbarer Stand gefragt ist. Ob Gartenschau, Stadtfest, Firmenaktion oder saisonale Veranstaltungsfläche: Der Trailer lässt sich flexibel einsetzen und inhaltlich passend aufbauen.</p>
 
-  <!-- Neuer schöner Kontaktbereich -->
-  <section id="kontakt" class="card contact-card">
-    <h2>Kontakt aufnehmen</h2>
-    <p class="contact-intro">Du planst ein Event, eine Feier oder sonstige Veranstaltung? Schreib uns eine Nachricht – wir melden uns so schnell wie möglich!</p>
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn btn-primary">Unverbindlich anfragen</a>
+            <a href="#bilder" class="btn btn-secondary">Trailer ansehen</a>
+          </div>
 
-    <div class="contact-wrapper">
-      <div class="contact-info">
-        <h3>📍 Standort</h3>
-        <p>64850 Schaafheim</p>
-        <h3>📞 Telefon</h3>
-        <p><a href="Zur Zeit nur per Mail.">Zur Zeit nur per Mail.</a></p>
-        <h3>📧 E-Mail</h3>
-        <p><a href="mailto:stefan@foodtrailer-rink.de">stefan@foodtrailer-rink.de</a></p>
+          <div class="signal-row">
+            <div class="signal">
+              <strong>Standort</strong>
+              <span>64850 Schaafheim</span>
+            </div>
+            <div class="signal">
+              <strong>Einsatzgebiet</strong>
+              <span>im Umkreis von ca. 80 km</span>
+            </div>
+            <div class="signal">
+              <strong>Angebot</strong>
+              <span>süß, herzhaft oder gemischt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stack">
+          <div class="hero-image" aria-label="Außenansicht des Foodtrailers">
+            <div class="hero-caption">
+              <strong>Ruhiger Auftritt, klarer Charakter</strong>
+              <span>Englischer Countrystyle mit einem Look, der auf Veranstaltungsflächen sofort auffällt, ohne aufdringlich zu wirken.</span>
+            </div>
+          </div>
+
+          <aside class="hero-sidecard">
+            <span class="mini-kicker">Wofür der Trailer besonders gut passt</span>
+            <h2>Mehr als nur ein Verkaufswagen</h2>
+            <p>Der Trailer ist für Veranstalter interessant, die nicht nur irgendeinen Stand suchen, sondern eine Lösung, die optisch gut wirkt und organisatorisch klar einzuordnen ist.</p>
+            <ul>
+              <li>geeignet für Publikum mit Laufkundschaft und Aufenthaltsflächen</li>
+              <li>ordentlicher, freundlicher Auftritt für öffentliche Formate</li>
+              <li>Abstimmung passend zu Anlass, Fläche und gewünschtem Angebot</li>
+            </ul>
+          </aside>
+        </div>
       </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="band">
+          <div>
+            <strong>Gut für Veranstalter</strong>
+            <span>klarer Auftritt, flexible Einsatzmöglichkeiten und ein Angebot, das nicht nach Standard aussieht</span>
+          </div>
+          <div>
+            <strong>Öffentliche Formate</strong>
+            <span>Märkte, Gartenschauen, Stadtfeste und Aktionstage</span>
+          </div>
+          <div>
+            <strong>Flexibles Konzept</strong>
+            <span>kompletter Trailer oder einzelne Geräte</span>
+          </div>
+          <div>
+            <strong>Direkter Kontakt</strong>
+            <span>bevorzugt per E-Mail</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="einsatz">
+      <div class="container layout-split">
+        <div class="panel">
+          <span class="section-tag">Einsatzbereiche</span>
+          <h2>Für Formate mit Publikum, Fläche und sichtbarem Betrieb</h2>
+          <p>Die Seite soll nicht so tun, als wäre der Trailer nur für private Feiern gedacht. Seine Stärke liegt vor allem dort, wo Menschen unterwegs sind, stehen bleiben, etwas mitnehmen oder sich bewusst einen schönen Anlaufpunkt auf einer Veranstaltung wünschen.</p>
+          <p>Deshalb ist der Fokus hier klar auf öffentliche und halböffentliche Formate gelegt: Veranstaltungen mit Besuchern, wechselndem Publikum und einem Umfeld, in dem Optik, Ablauf und Atmosphäre zusammenpassen sollten.</p>
+          <ul class="list-clean">
+            <li>Gartenschauen, saisonale Außenflächen und Veranstaltungsreihen</li>
+            <li>Stadtfeste, Märkte und Vereinsveranstaltungen</li>
+            <li>Firmenaktionen, Eröffnungen und Aktionstage</li>
+            <li>begleitende Verpflegung auf Eventflächen mit eigenem Charakter</li>
+          </ul>
+        </div>
+
+        <div class="mosaic">
+          <figure class="big"><img src="bilder/trailer3.jpg" alt="Foodtrailer auf einer Veranstaltungsfläche"></figure>
+          <figure><img src="bilder/trailer4.jpg" alt="Foodtrailer im Einsatz"></figure>
+          <figure><img src="bilder/trailer2.jpg" alt="Einblick in den Trailer"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="angebot">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Angebot</span>
+            <h2>Was im Trailer möglich ist</h2>
+          </div>
+          <p>Das Angebot muss nicht starr sein. Je nach Veranstaltung kann der Schwerpunkt anders gesetzt werden — süßer, herzhafter oder gemischt.</p>
+        </div>
+
+        <div class="offers-grid">
+          <article class="offer alt">
+            <h3>Süße Produkte</h3>
+            <p>Softeis und Bubblewaffeln eignen sich besonders gut für warme Tage, offene Eventflächen und Veranstaltungen, bei denen etwas Freundliches und unkompliziertes gefragt ist.</p>
+            <ul>
+              <li>Softeis mit verschiedenen Toppings</li>
+              <li>Bubblewaffeln als sichtbares Highlight</li>
+              <li>gut geeignet für Publikum mit Laufkundschaft</li>
+            </ul>
+          </article>
+
+          <article class="offer">
+            <h3>Herzhafte Optionen</h3>
+            <p>Wenn eine Veranstaltung auch etwas Kräftigeres braucht, lässt sich der Trailer mit einfachen herzhaften Angeboten sinnvoll ergänzen.</p>
+            <ul>
+              <li>Hotdogs klassisch oder etwas besonderer</li>
+              <li>Burger mit Pulled Pork</li>
+              <li>kleine Flatbreads ähnlich Mini-Flammkuchen</li>
+            </ul>
+          </article>
+
+          <article class="offer alt">
+            <h3>Besonderer Stil</h3>
+            <p>Der englische Countrystyle des Trailers kann auch inhaltlich aufgegriffen werden, wenn ein Anlass oder ein Format etwas mehr Eigencharakter bekommen soll.</p>
+            <ul>
+              <li>Afternoon Tea mit Scones und Gebäck</li>
+              <li>Pimm’s No. 1 als ergänzendes Extra</li>
+              <li>auch als saisonale oder thematische Aktion interessant</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Typische Einsätze</span>
+            <h2>Nicht für alles gleich — aber für vieles passend</h2>
+          </div>
+          <p>Je nach Format kann der Trailer unterschiedlich wirken: als feste Verpflegungsstation, als ergänzendes Angebot oder als gut erkennbarer Programmpunkt auf der Fläche.</p>
+        </div>
+
+        <div class="usecases-grid">
+          <article class="usecase main">
+            <h3>Öffentliche Veranstaltungen</h3>
+            <p>Für Stadtfeste, Märkte, Gartenschauen und saisonale Eventflächen passt der Trailer besonders gut, weil er sichtbar, freundlich und gleichzeitig ordentlich wirkt.</p>
+          </article>
+          <article class="usecase">
+            <h3>Firmenaktionen</h3>
+            <p>Auch bei Aktionstagen, Kundenveranstaltungen oder Eröffnungen lässt sich der Trailer als sympathischer Anlaufpunkt einsetzen.</p>
+          </article>
+          <article class="usecase">
+            <h3>Gerätevermietung</h3>
+            <p>Falls nicht der komplette Trailer gebraucht wird, können einzelne Geräte auch separat gemietet werden.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="bilder">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Bilder</span>
+            <h2>So sieht der Trailer aus</h2>
+          </div>
+          <p>Die Galerie nutzt nur die vorhandenen Bilder und zeigt den Trailer, die Ausstattung und einige Eindrücke aus dem Einsatz.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="bilder/trailer1.jpg" alt="Foodtrailer Außenansicht">
+          <img src="bilder/trailer2.jpg" alt="Innenausstattung des Foodtrailers">
+          <img src="bilder/trailer3.jpg" alt="Foodtrailer auf Veranstaltung">
+          <img src="bilder/trailer4.jpg" alt="Foodtrailer im Einsatz">
+          <img src="bilder/trailer5.jpg" alt="Getränke im Foodtrailer">
+          <img src="bilder/trailer6.jpg" alt="Softeis aus dem Foodtrailer">
+          <img src="bilder/trailer7.jpg" alt="Getränk aus dem Foodtrailer">
+          <img src="bilder/trailer1.jpg" alt="Foodtrailer Gesamtansicht">
+        </div>
+
+        <p class="gallery-note">Bilder lassen sich per Klick vergrößern.</p>
+      </div>
+    </section>
+
+    <section id="ablauf">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Ablauf</span>
+            <h2>Wie eine Anfrage typischerweise läuft</h2>
+          </div>
+          <p>Einfach, direkt und ohne unnötigen Baukasten-Text.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step">
+            <div class="step-number">1</div>
+            <h3>Rahmen schicken</h3>
+            <p>Schreibt kurz, um welches Format es geht, wo die Veranstaltung stattfindet und was ungefähr geplant ist.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">2</div>
+            <h3>Passendes Konzept klären</h3>
+            <p>Dann wird abgestimmt, ob der ganze Trailer, ein bestimmtes Angebot oder nur einzelne Geräte sinnvoll sind.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">3</div>
+            <h3>Angebot erhalten</h3>
+            <p>Danach gibt es ein individuelles Angebot, das zum Format und zum organisatorischen Rahmen passt.</p>
+          </article>
+          <article class="step">
+            <div class="step-number">4</div>
+            <h3>Einsatz umsetzen</h3>
+            <p>Am Veranstaltungstag fügt sich der Trailer sauber in die Fläche und den Ablauf ein.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container contact-grid">
+        <div class="contact-box dark">
+          <span class="section-tag" style="color:#f2c6b0;">Kontakt</span>
+          <h2 style="font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.9rem;">Anfragen für Veranstaltungen im Raum Schaafheim</h2>
+          <p>Wenn ihr eine öffentliche Veranstaltung, eine Aktionsfläche oder ein anderes passendes Format plant, schreibt uns gern mit den wichtigsten Eckdaten.</p>
+          <ul>
+            <li>Standort: 64850 Schaafheim</li>
+            <li>Einsatzgebiet: ungefähr 80 km rund um Schaafheim</li>
+            <li>E-Mail: <a href="mailto:stefan@foodtrailer-rink.de">stefan@foodtrailer-rink.de</a></li>
+            <li>Kontakt aktuell bevorzugt per E-Mail</li>
+          </ul>
+        </div>
+
+        <div class="contact-box">
+          <span class="section-tag">Für die Anfrage hilfreich</span>
+          <h3>Diese Infos reichen für einen guten ersten Überblick</h3>
+          <p>Es muss keine lange Anfrage sein. Ein paar Eckdaten helfen schon sehr.</p>
+          <ul>
+            <li>Datum oder Zeitraum</li>
+            <li>Ort der Veranstaltung</li>
+            <li>Art des Formats oder der Fläche</li>
+            <li>gewünschtes Angebot: süß, herzhaft oder gemischt</li>
+            <li>besondere Hinweise zum Einsatz</li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:stefan@foodtrailer-rink.de?subject=Anfrage%20Foodtrailer">E-Mail schreiben</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-box">
+      <div>
+        <strong>Impressum</strong><br>
+        Stefan Rink<br>
+        Waldstraße 16<br>
+        64850 Schaafheim<br>
+        <a href="mailto:rink-avc@t-online.de">rink-avc@t-online.de</a>
+      </div>
+      <div>© 2026 Rink Foodtrailer</div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-     Impressum: <br>
-    Stefan Rink <br>
-    Waldstraße 16<br>
-    64850 Schaafheim <br>
-    rink-avc@t-online.de <br>
-  <p>© 2025 Rink AVC Systeme | Alle Rechte vorbehalten</p>
-</footer>
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="close" aria-label="Bild schließen">&times;</button>
+    <button class="prev" aria-label="Vorheriges Bild">&#10094;</button>
+    <img id="lightbox-img" class="lightbox-content" alt="Großansicht Galerie">
+    <button class="next" aria-label="Nächstes Bild">&#10095;</button>
+  </div>
 
-<div id="lightbox" class="lightbox" aria-hidden="true">
-  <button class="close">&times;</button>
-  <button class="prev">&#10094;</button>
-  <img id="lightbox-img" class="lightbox-content">
-  <button class="next">&#10095;</button>
-</div>
   <script>
-    // Lightbox
-  const lb=document.getElementById("lightbox"),img=lb.querySelector("#lightbox-img");
-  const imgs=Array.from(document.querySelectorAll(".gallery img"));
-  let i=0;
-  const show=n=>{i=(n+imgs.length)%imgs.length;img.src=imgs[i].src;lb.setAttribute("aria-hidden","false");};
-  imgs.forEach((im,n)=>im.addEventListener("click",()=>show(n)));
-  lb.querySelector(".close").onclick=()=>lb.setAttribute("aria-hidden","true");
-  lb.querySelector(".next").onclick=()=>show(i+1);
-  lb.querySelector(".prev").onclick=()=>show(i-1);
-  lb.addEventListener("click",e=>{if(e.target===lb)lb.setAttribute("aria-hidden","true");});
-</script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      siteNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          siteNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const imgs = Array.from(document.querySelectorAll('.gallery-grid img'));
+    let currentIndex = 0;
+
+    const showImage = (index) => {
+      currentIndex = (index + imgs.length) % imgs.length;
+      img.src = imgs[currentIndex].src;
+      img.alt = imgs[currentIndex].alt;
+      lb.setAttribute('aria-hidden', 'false');
+    };
+
+    imgs.forEach((image, index) => {
+      image.addEventListener('click', () => showImage(index));
+    });
+
+    lb.querySelector('.close').addEventListener('click', () => lb.setAttribute('aria-hidden', 'true'));
+    lb.querySelector('.next').addEventListener('click', () => showImage(currentIndex + 1));
+    lb.querySelector('.prev').addEventListener('click', () => showImage(currentIndex - 1));
+
+    lb.addEventListener('click', (event) => {
+      if (event.target === lb) lb.setAttribute('aria-hidden', 'true');
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (lb.getAttribute('aria-hidden') === 'true') return;
+      if (event.key === 'Escape') lb.setAttribute('aria-hidden', 'true');
+      if (event.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (event.key === 'ArrowLeft') showImage(currentIndex - 1);
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
